@@ -19,3 +19,22 @@ var removeDuplicates = function(s) {
   
   return s
 };
+
+/**
+ * @param {string} S
+ * @return {string}
+ */
+var removeDuplicates = function(s) {
+    let pointer = 0
+    
+    while (s[pointer]) {
+        if (s[pointer] === s[pointer + 1]) {
+            s = s.slice(0, pointer) + s.slice(pointer + 2);
+            pointer = 0;
+        } else {
+            pointer++;
+        }
+    }
+    
+    return s
+};
