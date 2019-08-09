@@ -15,3 +15,11 @@ var isPerfectSquare = function(num) {
   
   return !!check;
 };
+
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
+var isPerfectSquare = function(num) {
+  return Number.isInteger(num ** .5)
+};
