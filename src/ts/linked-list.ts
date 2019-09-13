@@ -1,21 +1,19 @@
 class LinkedListNode<T> {
-  value: T;
   next: any;
 
-  constructor(value: T) {
-    this.value = value;
+  constructor(public value: T) {
     this.next = null;
   }
 }
 
-export default class LinkedList<T> {
+interface LinkedListInterface {
   head: any;
   tail: any;
+}
 
-  constructor() {
-    this.head = null;
-    this.tail = null;
-  }
+export default class LinkedList<T> implements LinkedListInterface {
+  head: any = null;
+  tail: any = null;
 
   push(arg: T) {
     if (this.head === null) {
